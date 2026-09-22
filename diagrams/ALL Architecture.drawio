@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="SMWs-79BLJokrMyMlmnB">
-    <mxGraphModel dx="3213" dy="2837" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="5180" dy="3137" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -11,7 +11,7 @@
         </UserObject>
         <UserObject label="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;1. Client / Presentation Layer&lt;/span&gt;" mermaidId="n:ClientLayer" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=light-dark(#ffffde,#1f2020);strokeColor=light-dark(#aaaa33,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="1. Client / Presentation Layer" id="akLvHE5HhMrmsMF_afz0-2">
           <mxCell parent="akLvHE5HhMrmsMF_afz0-1" style="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=#AEEFA4;strokeColor=#001DBC;fontColor=#ffffff;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;rounded=1;" vertex="1">
-            <mxGeometry height="201" width="566" x="1250" y="-620" as="geometry" />
+            <mxGeometry height="201" width="566" x="1030" y="-620" as="geometry" />
           </mxCell>
         </UserObject>
         <UserObject label="&amp;nbsp; all-learner-ai-app (Port 3000)&lt;br&gt;&amp;nbsp; • React SPA / PWA&lt;br&gt;&amp;nbsp; • Game Mechanisms (SoundHunt, WordHunt, Bingo, Reading)&lt;br&gt;&amp;nbsp; • Audio Diagnostics &amp;amp; Web Audio Recorder&lt;br&gt;&amp;nbsp; • Sunbird Telemetry Generator" mermaidId="n:Player" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="all-learner-ai-app (Port 3000)&#xa;• React SPA / PWA&#xa;• Game Mechanisms (SoundHunt, WordHunt, Bingo, Reading)&#xa;• Audio Diagnostics &amp; Web Audio Recorder&#xa;• Sunbird Telemetry Generator" id="akLvHE5HhMrmsMF_afz0-3">
@@ -21,7 +21,7 @@
         </UserObject>
         <UserObject label="2. Identity &amp; Access Layer" mermaidId="n:GatewayAuth" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=light-dark(#ffffde,#1f2020);strokeColor=light-dark(#aaaa33,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="2. Identity &amp; Access Layer" id="akLvHE5HhMrmsMF_afz0-4">
           <mxCell parent="akLvHE5HhMrmsMF_afz0-1" style="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=light-dark(#CEDEFF,#1F2020);strokeColor=light-dark(#aaaa33,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;rounded=1;" vertex="1">
-            <mxGeometry height="220" width="535" x="455" y="-228" as="geometry" />
+            <mxGeometry height="220" width="535" x="-355" y="-424" as="geometry" />
           </mxCell>
         </UserObject>
         <UserObject label="&amp;nbsp; axl-login-service (Port 8000)&lt;br&gt;&amp;nbsp; • Express / Node.js&lt;br&gt;&amp;nbsp; • Nested JWE/JWS Token Generation (HS256 + A128CBC)&lt;br&gt;&amp;nbsp; • Session Registry &amp;amp; Active Token Tracking&lt;br&gt;&amp;nbsp; • Virtual ID Resolution &amp;amp; Student Management&lt;br&gt;&amp;nbsp; • Graduation &amp;amp; Lifecycle Management" mermaidId="n:AuthService" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="axl-login-service / axl-login-service-x (Port 8000)&#xa;• Express / Node.js&#xa;• Nested JWE/JWS Token Generation (HS256 + A128CBC)&#xa;• Session Registry &amp; Active Token Tracking&#xa;• Virtual ID Resolution &amp; Student Management&#xa;• Graduation &amp; Lifecycle Management" id="akLvHE5HhMrmsMF_afz0-5">
@@ -31,7 +31,7 @@
         </UserObject>
         <UserObject label="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;3. Core Platform Services Layer&lt;/span&gt;" mermaidId="n:BusinessCore" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=light-dark(#ffffde,#1f2020);strokeColor=light-dark(#aaaa33,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="3. Core Platform Services Layer" id="akLvHE5HhMrmsMF_afz0-6">
           <mxCell parent="akLvHE5HhMrmsMF_afz0-1" style="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=light-dark(#E4B7FF,#E5CCFF);strokeColor=#3700CC;fontColor=#ffffff;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;rounded=1;" vertex="1">
-            <mxGeometry height="201" width="1537" x="560" y="559" as="geometry" />
+            <mxGeometry height="201" width="1537" x="447" y="56" as="geometry" />
           </mxCell>
         </UserObject>
         <UserObject label="&amp;nbsp; all-orchestration-service (Port 3009)&lt;br&gt;&amp;nbsp; • Express / TypeScript&lt;br&gt;&amp;nbsp; • Lesson Progress Tracker (addLesson, getLessonProgress)&lt;br&gt;&amp;nbsp; • Milestone State Machine (LLPPS Cycle)&lt;br&gt;&amp;nbsp; • Gamification Points System" mermaidId="n:OrchestrationService" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="all-orchestration-service (Port 3009)&#xa;• Express / TypeScript&#xa;• Lesson Progress Tracker (addLesson, getLessonProgress)&#xa;• Milestone State Machine (LLPPS Cycle)&#xa;• Gamification Points System" id="akLvHE5HhMrmsMF_afz0-7">
@@ -51,7 +51,7 @@
         </UserObject>
         <UserObject label="4. Speech AI &amp; Evaluation Layer" mermaidId="n:IntelligenceLayer" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=light-dark(#ffffde,#1f2020);strokeColor=light-dark(#aaaa33,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="4. Speech AI &amp; Evaluation Layer" id="akLvHE5HhMrmsMF_afz0-10">
           <mxCell parent="akLvHE5HhMrmsMF_afz0-1" style="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=#E0D1FF;strokeColor=#36393d;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;rounded=1;" vertex="1">
-            <mxGeometry height="445" width="769" x="2481" y="231" as="geometry" />
+            <mxGeometry height="445" width="769" x="2026" y="-424" as="geometry" />
           </mxCell>
         </UserObject>
         <mxCell id="akLvHE5HhMrmsMF_afz0-75" edge="1" parent="akLvHE5HhMrmsMF_afz0-10" source="akLvHE5HhMrmsMF_afz0-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-12">
@@ -74,7 +74,7 @@
         </UserObject>
         <UserObject label="5. External AI &amp; Cloud Services" mermaidId="n:ExternalServices" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=light-dark(#ffffde,#1f2020);strokeColor=light-dark(#aaaa33,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="5. External AI &amp; Cloud Services" id="akLvHE5HhMrmsMF_afz0-14">
           <mxCell parent="akLvHE5HhMrmsMF_afz0-1" style="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=light-dark(#ffffde,#1f2020);strokeColor=light-dark(#aaaa33,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;rounded=1;" vertex="1">
-            <mxGeometry height="209" width="2656" x="55" y="959" as="geometry" />
+            <mxGeometry height="209" width="2656" x="89" y="435" as="geometry" />
           </mxCell>
         </UserObject>
         <UserObject label="&amp;nbsp; AI4Bharat Dhruva API (EkStep)&lt;br&gt;&amp;nbsp; • Indian Language Conformer &amp;amp; Whisper ASR&lt;br&gt;&amp;nbsp; • Returns Transcripts + nBestTokens Probabilities" mermaidId="n:AI4Bharat" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="AI4Bharat Dhruva API (EkStep)&#xa;• Indian Language Conformer &amp; Whisper ASR&#xa;• Returns Transcripts + nBestTokens Probabilities" id="akLvHE5HhMrmsMF_afz0-15">
@@ -99,7 +99,7 @@
         </mxCell>
         <mxCell id="akLvHE5HhMrmsMF_afz0-40" connectable="0" parent="akLvHE5HhMrmsMF_afz0-39" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;POST /api/v1/student/login&amp;nbsp;&lt;/span&gt;" vertex="1">
           <mxGeometry relative="1" x="0.0415" y="-2" as="geometry">
-            <mxPoint x="99" y="2" as="offset" />
+            <mxPoint x="426" y="2" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="akLvHE5HhMrmsMF_afz0-41" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="akLvHE5HhMrmsMF_afz0-17">
@@ -115,7 +115,7 @@
         </mxCell>
         <mxCell id="akLvHE5HhMrmsMF_afz0-46" connectable="0" parent="akLvHE5HhMrmsMF_afz0-45" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;POST /scores/updateLearnerProfile (Audio)&amp;nbsp;&lt;/span&gt;" vertex="1">
           <mxGeometry relative="1" x="0.4237" y="1" as="geometry">
-            <mxPoint x="-635" y="-303" as="offset" />
+            <mxPoint x="-217" y="1" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="akLvHE5HhMrmsMF_afz0-47" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-9">
@@ -123,55 +123,55 @@
         </mxCell>
         <mxCell id="akLvHE5HhMrmsMF_afz0-48" connectable="0" parent="akLvHE5HhMrmsMF_afz0-47" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;POST /v3/telemetry (Events)&amp;nbsp;&lt;/span&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.059" y="4" as="geometry">
-            <mxPoint x="21" y="-411" as="offset" />
+            <mxPoint x="1" y="-116" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="akLvHE5HhMrmsMF_afz0-49" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-8">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1409" y="80" />
-              <mxPoint x="1491.75" y="80" />
+              <mxPoint x="1189" y="-127.13" />
+              <mxPoint x="1378.75" y="-127.13" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="akLvHE5HhMrmsMF_afz0-50" connectable="0" parent="akLvHE5HhMrmsMF_afz0-49" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;GET /v1/content/:level/:lang&amp;nbsp;&lt;/span&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.2572" y="6" as="geometry">
-            <mxPoint x="35" y="103" as="offset" />
+            <mxPoint x="93" y="43" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="akLvHE5HhMrmsMF_afz0-51" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-7">
+        <mxCell id="akLvHE5HhMrmsMF_afz0-51" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-7">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="350.33" y="-476.67" />
-              <mxPoint x="350.33" y="702.33" />
+              <mxPoint x="835.25" y="-476.75" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="akLvHE5HhMrmsMF_afz0-52" connectable="0" parent="akLvHE5HhMrmsMF_afz0-51" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;POST /addLesson, GET /getLessonProgress&amp;nbsp;&lt;/span&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.2186" y="4" as="geometry">
-            <mxPoint x="549" y="-4" as="offset" />
+            <mxPoint x="-25" y="-85" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="akLvHE5HhMrmsMF_afz0-53" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-5">
+        <mxCell id="akLvHE5HhMrmsMF_afz0-53" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-5">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="712.75" y="374.5" />
-              <mxPoint x="606.25" y="374.5" />
+              <mxPoint x="594.8" y="-266.4" />
             </Array>
+            <mxPoint x="642.0000000000002" y="17" as="sourcePoint" />
+            <mxPoint x="655.5" y="-208" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="akLvHE5HhMrmsMF_afz0-56" connectable="0" parent="akLvHE5HhMrmsMF_afz0-53" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;Verify Session Status&amp;nbsp;&lt;/span&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.0075" y="-4" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="-87" y="5" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="akLvHE5HhMrmsMF_afz0-57" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-5" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;Verify Session Status&amp;nbsp;&lt;/span&gt;">
-          <mxGeometry relative="1" x="0.2165" as="geometry">
-            <mxPoint as="offset" />
+          <mxGeometry relative="1" x="0.19" as="geometry">
+            <mxPoint x="1" as="offset" />
             <Array as="points">
-              <mxPoint x="1086.25" y="636.75" />
-              <mxPoint x="1086.25" y="376" />
-              <mxPoint x="838.75" y="376" />
+              <mxPoint x="970.82" y="131.73" />
+              <mxPoint x="970.82" y="-129.91" />
+              <mxPoint x="28.82" y="-129.91" />
             </Array>
             <mxPoint x="1151.0000000000005" y="782.7500000000005" as="sourcePoint" />
             <mxPoint x="990" y="38" as="targetPoint" />
@@ -180,22 +180,22 @@
         <mxCell id="akLvHE5HhMrmsMF_afz0-59" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=99.25;entryPerimeter=0;" target="akLvHE5HhMrmsMF_afz0-16">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="948.33" y="1103.33" />
+              <mxPoint x="835.22" y="579.33" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="akLvHE5HhMrmsMF_afz0-60" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=39.75;entryPerimeter=0;" target="akLvHE5HhMrmsMF_afz0-16">
+        <mxCell id="akLvHE5HhMrmsMF_afz0-60" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="akLvHE5HhMrmsMF_afz0-16">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="409.13" y="-108" />
-              <mxPoint x="409.13" y="1043.74" />
+              <mxPoint x="-87.33" y="320" />
+              <mxPoint x="1784" y="320" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="akLvHE5HhMrmsMF_afz0-61" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-5">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1765.8" y="-108" />
+              <mxPoint x="1649.89" y="-304" />
             </Array>
             <mxPoint x="1767.25" y="652" as="sourcePoint" />
             <mxPoint x="724" y="15" as="targetPoint" />
@@ -203,61 +203,64 @@
         </mxCell>
         <mxCell id="akLvHE5HhMrmsMF_afz0-62" connectable="0" parent="akLvHE5HhMrmsMF_afz0-61" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;Verify Session Status&amp;nbsp;&lt;/span&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.1066" y="3" as="geometry">
-            <mxPoint x="-604" y="-32" as="offset" />
+            <mxPoint x="-730" y="-3" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="akLvHE5HhMrmsMF_afz0-63" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-8">
+        <mxCell id="akLvHE5HhMrmsMF_afz0-63" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-8">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1650" y="313.43" />
-              <mxPoint x="1650" y="636.86" />
+              <mxPoint x="1528.55" y="-266.45" />
+              <mxPoint x="1528.55" y="131.82" />
+              <mxPoint x="1504" y="131.82" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="akLvHE5HhMrmsMF_afz0-64" connectable="0" parent="akLvHE5HhMrmsMF_afz0-63" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;Fetch Target Content&amp;nbsp;&lt;/span&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.3624" y="-2" as="geometry">
-            <mxPoint x="1" as="offset" />
+            <mxPoint x="-235" y="110" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="akLvHE5HhMrmsMF_afz0-65" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-5">
+        <mxCell id="akLvHE5HhMrmsMF_afz0-65" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-5">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="akLvHE5HhMrmsMF_afz0-66" connectable="0" parent="akLvHE5HhMrmsMF_afz0-65" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;Verify Session Status&amp;nbsp;&lt;/span&gt;" vertex="1">
           <mxGeometry relative="1" x="0.459" y="2" as="geometry">
-            <mxPoint x="-353" y="-2" as="offset" />
+            <mxPoint x="-190" y="-6" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="akLvHE5HhMrmsMF_afz0-68" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="akLvHE5HhMrmsMF_afz0-16">
+        <mxCell id="akLvHE5HhMrmsMF_afz0-68" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=39.75;entryPerimeter=0;" target="akLvHE5HhMrmsMF_afz0-16">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1491.86" y="840" />
-              <mxPoint x="1590" y="840" />
-              <mxPoint x="1590" y="1073.43" />
+              <mxPoint x="1253.67" y="519.67" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="akLvHE5HhMrmsMF_afz0-69" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="akLvHE5HhMrmsMF_afz0-16">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="akLvHE5HhMrmsMF_afz0-70" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=99.25;entryPerimeter=0;" target="akLvHE5HhMrmsMF_afz0-16">
+        <mxCell id="akLvHE5HhMrmsMF_afz0-69" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=39.75;entryPerimeter=0;" target="akLvHE5HhMrmsMF_afz0-16">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="2250" y="351" />
-              <mxPoint x="2250" y="1103.2" />
+              <mxPoint x="2055.22" y="199.33" />
+              <mxPoint x="2055.22" y="519.78" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="akLvHE5HhMrmsMF_afz0-73" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-15">
+        <mxCell id="akLvHE5HhMrmsMF_afz0-70" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=99.25;entryPerimeter=0;" target="akLvHE5HhMrmsMF_afz0-16">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="2594.86" y="834" />
-              <mxPoint x="2573.71" y="834" />
+              <mxPoint x="2141.75" y="579.25" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-73" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2220.55" y="319.82" />
+              <mxPoint x="2505.55" y="319.82" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="akLvHE5HhMrmsMF_afz0-74" connectable="0" parent="akLvHE5HhMrmsMF_afz0-73" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;ASR Inference (WAV)&amp;nbsp;&lt;/span&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.2327" as="geometry">
-            <mxPoint y="52" as="offset" />
+            <mxPoint x="126" y="154" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
