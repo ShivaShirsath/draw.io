@@ -1,0 +1,266 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="SMWs-79BLJokrMyMlmnB">
+    <mxGraphModel dx="3213" dy="2837" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" mermaidData="{&#xa;  &quot;data&quot;: &quot;flowchart TB\n    subgraph ClientLayer [\&quot;1. Client / Presentation Layer\&quot;]\n        Player[\&quot;all-learner-ai-app (Port 3000)&lt;br/&gt;• React SPA / PWA&lt;br/&gt;• Game Mechanisms (SoundHunt, WordHunt, Bingo, Reading)&lt;br/&gt;• Audio Diagnostics &amp; Web Audio Recorder&lt;br/&gt;• Sunbird Telemetry Generator\&quot;]\n    end\n\n    subgraph GatewayAuth [\&quot;2. Identity &amp; Access Layer\&quot;]\n        AuthService[\&quot;axl-login-service / axl-login-service-x (Port 8000)&lt;br/&gt;• Express / Node.js&lt;br/&gt;• Nested JWE/JWS Token Generation (HS256 + A128CBC)&lt;br/&gt;• Session Registry &amp; Active Token Tracking&lt;br/&gt;• Virtual ID Resolution &amp; Student Management&lt;br/&gt;• Graduation &amp; Lifecycle Management\&quot;]\n    end\n\n    subgraph BusinessCore [\&quot;3. Core Platform Services Layer\&quot;]\n        OrchestrationService[\&quot;all-orchestration-service (Port 3009)&lt;br/&gt;• Express / TypeScript&lt;br/&gt;• Lesson Progress Tracker (addLesson, getLessonProgress)&lt;br/&gt;• Milestone State Machine (LLPPS Cycle)&lt;br/&gt;• Gamification Points System\&quot;]\n        \n        ContentService[\&quot;all-content-service (Port 3008)&lt;br/&gt;• NestJS / TypeScript&lt;br/&gt;• Multilingual Curriculum Repository (Letters, Words, Stories)&lt;br/&gt;• Level Content Mapping (B, m1 - m15)&lt;br/&gt;• Media &amp; Mechanism Metadata Delivery\&quot;]\n        \n        TelemetryMW[\&quot;all-telemetry-mw (Port 9001)&lt;br/&gt;• Express / Node.js&lt;br/&gt;• Sunbird Telemetry Standard (v1, v2, v3)&lt;br/&gt;• Real-time Event Validation &amp; Batch Ingestion&lt;br/&gt;• Dispatchers (MongoDB, ClickHouse, MySQL)\&quot;]\n    end\n\n    subgraph IntelligenceLayer [\&quot;4. Speech AI &amp; Evaluation Layer\&quot;]\n        LearnerAIService[\&quot;all-learner-ai-services (Port 3001)&lt;br/&gt;• NestJS / TypeScript&lt;br/&gt;• Pronunciation &amp; Fluency Engine&lt;br/&gt;• Grapheme-to-Phoneme Alignment&lt;br/&gt;• TOWRE Assessment Engine&lt;br/&gt;• Recommendation Engine Client\&quot;]\n        \n        TextEvalService[\&quot;all-learner-text-eval (Port 5001)&lt;br/&gt;• Python / Flask&lt;br/&gt;• RNNoise Audio Denoising&lt;br/&gt;• Praat Acoustic Prosody (Pitch, Intensity, Pauses)&lt;br/&gt;• WER, CER, WPM &amp; Reading Rate Computation\&quot;]\n    end\n\n    subgraph ExternalServices [\&quot;5. External AI &amp; Cloud Services\&quot;]\n        AI4Bharat[\&quot;AI4Bharat Dhruva API (EkStep)&lt;br/&gt;• Indian Language Conformer &amp; Whisper ASR&lt;br/&gt;• Returns Transcripts + nBestTokens Probabilities\&quot;]\n        MongoDB[(\&quot;MongoDB / Atlas&lt;br/&gt;• lesson_points_tracker&lt;br/&gt;• all_content_db&lt;br/&gt;• all_learner_ai&lt;br/&gt;• AXL-LOGIN-TE-TEST\&quot;)]\n        S3Bucket[(\&quot;Cloud Storage (AWS S3)&lt;br/&gt;• Frontend Web Hosting (CloudFront)&lt;br/&gt;• Audio Recordings &amp; Media Assets\&quot;)]\n    end\n\n    %% Client Interactions\n    Player --&gt;|\&quot;1. POST /api/v1/student/login\&quot;| AuthService\n    Player --&gt;|\&quot;2. GET /v1/content/:level/:lang\&quot;| ContentService\n    Player --&gt;|\&quot;3. POST /addLesson, GET /getLessonProgress\&quot;| OrchestrationService\n    Player --&gt;|\&quot;4. POST /scores/updateLearnerProfile (Audio)\&quot;| LearnerAIService\n    Player --&gt;|\&quot;5. POST /v3/telemetry (Events)\&quot;| TelemetryMW\n\n    %% Token Status Verifications\n    OrchestrationService -.-&gt;|\&quot;Verify Session Status\&quot;| AuthService\n    ContentService -.-&gt;|\&quot;Verify Session Status\&quot;| AuthService\n    LearnerAIService -.-&gt;|\&quot;Verify Session Status\&quot;| AuthService\n    TelemetryMW -.-&gt;|\&quot;Verify Session Status\&quot;| AuthService\n\n    %% Speech Pipeline\n    LearnerAIService --&gt;|\&quot;ASR Inference (WAV)\&quot;| AI4Bharat\n    LearnerAIService --&gt;|\&quot;RNNoise &amp; Praat Prosody\&quot;| TextEvalService\n    LearnerAIService --&gt;|\&quot;Fetch Target Content\&quot;| ContentService\n\n    %% Data Persistence\n    AuthService --&gt; MongoDB\n    OrchestrationService --&gt; MongoDB\n    ContentService --&gt; MongoDB\n    LearnerAIService --&gt; MongoDB\n    TelemetryMW --&gt; MongoDB\n    Player -.-&gt;|\&quot;Upload/Stream Audio\&quot;| S3Bucket\n\n&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="akLvHE5HhMrmsMF_afz0-1">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;rounded=1;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;1. Client / Presentation Layer&lt;/span&gt;" mermaidId="n:ClientLayer" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=light-dark(#ffffde,#1f2020);strokeColor=light-dark(#aaaa33,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="1. Client / Presentation Layer" id="akLvHE5HhMrmsMF_afz0-2">
+          <mxCell parent="akLvHE5HhMrmsMF_afz0-1" style="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=#AEEFA4;strokeColor=#001DBC;fontColor=#ffffff;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;rounded=1;" vertex="1">
+            <mxGeometry height="201" width="566" x="1250" y="-620" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&amp;nbsp; all-learner-ai-app (Port 3000)&lt;br&gt;&amp;nbsp; • React SPA / PWA&lt;br&gt;&amp;nbsp; • Game Mechanisms (SoundHunt, WordHunt, Bingo, Reading)&lt;br&gt;&amp;nbsp; • Audio Diagnostics &amp;amp; Web Audio Recorder&lt;br&gt;&amp;nbsp; • Sunbird Telemetry Generator" mermaidId="n:Player" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="all-learner-ai-app (Port 3000)&#xa;• React SPA / PWA&#xa;• Game Mechanisms (SoundHunt, WordHunt, Bingo, Reading)&#xa;• Audio Diagnostics &amp; Web Audio Recorder&#xa;• Sunbird Telemetry Generator" id="akLvHE5HhMrmsMF_afz0-3">
+          <mxCell parent="akLvHE5HhMrmsMF_afz0-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;align=left;rounded=1;" vertex="1">
+            <mxGeometry height="131" width="496" x="35" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="2. Identity &amp; Access Layer" mermaidId="n:GatewayAuth" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=light-dark(#ffffde,#1f2020);strokeColor=light-dark(#aaaa33,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="2. Identity &amp; Access Layer" id="akLvHE5HhMrmsMF_afz0-4">
+          <mxCell parent="akLvHE5HhMrmsMF_afz0-1" style="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=light-dark(#CEDEFF,#1F2020);strokeColor=light-dark(#aaaa33,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;rounded=1;" vertex="1">
+            <mxGeometry height="220" width="535" x="455" y="-228" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&amp;nbsp; axl-login-service (Port 8000)&lt;br&gt;&amp;nbsp; • Express / Node.js&lt;br&gt;&amp;nbsp; • Nested JWE/JWS Token Generation (HS256 + A128CBC)&lt;br&gt;&amp;nbsp; • Session Registry &amp;amp; Active Token Tracking&lt;br&gt;&amp;nbsp; • Virtual ID Resolution &amp;amp; Student Management&lt;br&gt;&amp;nbsp; • Graduation &amp;amp; Lifecycle Management" mermaidId="n:AuthService" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="axl-login-service / axl-login-service-x (Port 8000)&#xa;• Express / Node.js&#xa;• Nested JWE/JWS Token Generation (HS256 + A128CBC)&#xa;• Session Registry &amp; Active Token Tracking&#xa;• Virtual ID Resolution &amp; Student Management&#xa;• Graduation &amp; Lifecycle Management" id="akLvHE5HhMrmsMF_afz0-5">
+          <mxCell parent="akLvHE5HhMrmsMF_afz0-4" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;rounded=1;align=left;" vertex="1">
+            <mxGeometry height="150" width="465" x="35" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;3. Core Platform Services Layer&lt;/span&gt;" mermaidId="n:BusinessCore" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=light-dark(#ffffde,#1f2020);strokeColor=light-dark(#aaaa33,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="3. Core Platform Services Layer" id="akLvHE5HhMrmsMF_afz0-6">
+          <mxCell parent="akLvHE5HhMrmsMF_afz0-1" style="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=light-dark(#E4B7FF,#E5CCFF);strokeColor=#3700CC;fontColor=#ffffff;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;rounded=1;" vertex="1">
+            <mxGeometry height="201" width="1537" x="560" y="559" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&amp;nbsp; all-orchestration-service (Port 3009)&lt;br&gt;&amp;nbsp; • Express / TypeScript&lt;br&gt;&amp;nbsp; • Lesson Progress Tracker (addLesson, getLessonProgress)&lt;br&gt;&amp;nbsp; • Milestone State Machine (LLPPS Cycle)&lt;br&gt;&amp;nbsp; • Gamification Points System" mermaidId="n:OrchestrationService" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="all-orchestration-service (Port 3009)&#xa;• Express / TypeScript&#xa;• Lesson Progress Tracker (addLesson, getLessonProgress)&#xa;• Milestone State Machine (LLPPS Cycle)&#xa;• Gamification Points System" id="akLvHE5HhMrmsMF_afz0-7">
+          <mxCell parent="akLvHE5HhMrmsMF_afz0-6" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;rounded=1;align=left;" vertex="1">
+            <mxGeometry height="131" width="471" x="35" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&amp;nbsp; all-content-service (Port 3008)&lt;br&gt;&amp;nbsp; • NestJS / TypeScript&lt;br&gt;&amp;nbsp; • Multilingual Curriculum Repository (Letters, Words, Stories)&lt;br&gt;&amp;nbsp; • Level Content Mapping (B, m1 - m15)&lt;br&gt;&amp;nbsp; • Media &amp;amp; Mechanism Metadata Delivery" mermaidId="n:ContentService" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="all-content-service (Port 3008)&#xa;• NestJS / TypeScript&#xa;• Multilingual Curriculum Repository (Letters, Words, Stories)&#xa;• Level Content Mapping (B, m1 - m15)&#xa;• Media &amp; Mechanism Metadata Delivery" id="akLvHE5HhMrmsMF_afz0-8">
+          <mxCell parent="akLvHE5HhMrmsMF_afz0-6" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;rounded=1;align=left;" vertex="1">
+            <mxGeometry height="131" width="501" x="556" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&amp;nbsp; all-telemetry-mw (Port 9001)&lt;br&gt;&amp;nbsp; • Express / Node.js&lt;br&gt;&amp;nbsp; • Sunbird Telemetry Standard (v1, v2, v3)&lt;br&gt;&amp;nbsp; • Real-time Event Validation &amp;amp; Batch Ingestion&lt;br&gt;&amp;nbsp; • Dispatchers (MongoDB, ClickHouse, MySQL)" mermaidId="n:TelemetryMW" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="all-telemetry-mw (Port 9001)&#xa;• Express / Node.js&#xa;• Sunbird Telemetry Standard (v1, v2, v3)&#xa;• Real-time Event Validation &amp; Batch Ingestion&#xa;• Dispatchers (MongoDB, ClickHouse, MySQL)" id="akLvHE5HhMrmsMF_afz0-9">
+          <mxCell parent="akLvHE5HhMrmsMF_afz0-6" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;rounded=1;align=left;" vertex="1">
+            <mxGeometry height="131" width="395" x="1107" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="4. Speech AI &amp; Evaluation Layer" mermaidId="n:IntelligenceLayer" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=light-dark(#ffffde,#1f2020);strokeColor=light-dark(#aaaa33,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="4. Speech AI &amp; Evaluation Layer" id="akLvHE5HhMrmsMF_afz0-10">
+          <mxCell parent="akLvHE5HhMrmsMF_afz0-1" style="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=#E0D1FF;strokeColor=#36393d;fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;rounded=1;" vertex="1">
+            <mxGeometry height="445" width="769" x="2481" y="231" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-75" edge="1" parent="akLvHE5HhMrmsMF_afz0-10" source="akLvHE5HhMrmsMF_afz0-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-76" connectable="0" parent="akLvHE5HhMrmsMF_afz0-75" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;RNNoise &amp;amp; Praat Prosody&amp;nbsp;&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.5003" y="-1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="&amp;nbsp; all-learner-ai-services (Port 3001)&lt;br&gt;&amp;nbsp; • NestJS / TypeScript&lt;br&gt;&amp;nbsp; • Pronunciation &amp;amp; Fluency Engine&lt;br&gt;&amp;nbsp; • Grapheme-to-Phoneme Alignment&lt;br&gt;&amp;nbsp; • TOWRE Assessment Engine&lt;br&gt;&amp;nbsp; • Recommendation Engine Client" mermaidId="n:LearnerAIService" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="all-learner-ai-services (Port 3001)&#xa;• NestJS / TypeScript&#xa;• Pronunciation &amp; Fluency Engine&#xa;• Grapheme-to-Phoneme Alignment&#xa;• TOWRE Assessment Engine&#xa;• Recommendation Engine Client" id="akLvHE5HhMrmsMF_afz0-11">
+          <mxCell parent="akLvHE5HhMrmsMF_afz0-10" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;rounded=1;align=left;" vertex="1">
+            <mxGeometry height="150" width="315" x="35" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&amp;nbsp; all-learner-text-eval (Port 5001)&lt;br&gt;&amp;nbsp; • Python / Flask&lt;br&gt;&amp;nbsp; • RNNoise Audio Denoising&lt;br&gt;&amp;nbsp; • Praat Acoustic Prosody (Pitch, Intensity, Pauses)&lt;br&gt;&amp;nbsp; • WER, CER, WPM &amp;amp; Reading Rate Computation" mermaidId="n:TextEvalService" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="all-learner-text-eval (Port 5001)&#xa;• Python / Flask&#xa;• RNNoise Audio Denoising&#xa;• Praat Acoustic Prosody (Pitch, Intensity, Pauses)&#xa;• WER, CER, WPM &amp; Reading Rate Computation" id="akLvHE5HhMrmsMF_afz0-12">
+          <mxCell parent="akLvHE5HhMrmsMF_afz0-10" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;rounded=1;align=left;" vertex="1">
+            <mxGeometry height="131" width="415" x="319" y="289" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="5. External AI &amp; Cloud Services" mermaidId="n:ExternalServices" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=light-dark(#ffffde,#1f2020);strokeColor=light-dark(#aaaa33,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="5. External AI &amp; Cloud Services" id="akLvHE5HhMrmsMF_afz0-14">
+          <mxCell parent="akLvHE5HhMrmsMF_afz0-1" style="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=light-dark(#ffffde,#1f2020);strokeColor=light-dark(#aaaa33,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;rounded=1;" vertex="1">
+            <mxGeometry height="209" width="2656" x="55" y="959" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&amp;nbsp; AI4Bharat Dhruva API (EkStep)&lt;br&gt;&amp;nbsp; • Indian Language Conformer &amp;amp; Whisper ASR&lt;br&gt;&amp;nbsp; • Returns Transcripts + nBestTokens Probabilities" mermaidId="n:AI4Bharat" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="AI4Bharat Dhruva API (EkStep)&#xa;• Indian Language Conformer &amp; Whisper ASR&#xa;• Returns Transcripts + nBestTokens Probabilities" id="akLvHE5HhMrmsMF_afz0-15">
+          <mxCell parent="akLvHE5HhMrmsMF_afz0-14" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;rounded=1;align=left;" vertex="1">
+            <mxGeometry height="93" width="409" x="2212" y="68" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&amp;nbsp; MongoDB / Atlas&lt;br&gt;&amp;nbsp; • lesson_points_tracker&lt;br&gt;&amp;nbsp; • all_content_db&lt;br&gt;&amp;nbsp; • all_learner_ai&lt;br&gt;&amp;nbsp; • AXL-LOGIN-TE-TEST" mermaidId="n:MongoDB" mermaidBaseStyle="html=1;shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=1;whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="MongoDB / Atlas&#xa;• lesson_points_tracker&#xa;• all_content_db&#xa;• all_learner_ai&#xa;• AXL-LOGIN-TE-TEST" id="akLvHE5HhMrmsMF_afz0-16">
+          <mxCell parent="akLvHE5HhMrmsMF_afz0-14" style="html=1;shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=1;whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;rounded=1;align=left;" vertex="1">
+            <mxGeometry height="139" width="184" x="1603" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&amp;nbsp; Cloud Storage (AWS S3)&lt;br&gt;&amp;nbsp; • Frontend Web Hosting (CloudFront)&lt;br&gt;&amp;nbsp; • Audio Recordings &amp;amp; Media Assets" mermaidId="n:S3Bucket" mermaidBaseStyle="html=1;shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=1;whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Cloud Storage (AWS S3)&#xa;• Frontend Web Hosting (CloudFront)&#xa;• Audio Recordings &amp; Media Assets" id="akLvHE5HhMrmsMF_afz0-17">
+          <mxCell parent="akLvHE5HhMrmsMF_afz0-14" style="html=1;shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=1;whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;rounded=1;align=left;" vertex="1">
+            <mxGeometry height="101" width="282" x="35" y="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-39" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="594.57" y="-191.71" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-40" connectable="0" parent="akLvHE5HhMrmsMF_afz0-39" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;POST /api/v1/student/login&amp;nbsp;&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0415" y="-2" as="geometry">
+            <mxPoint x="99" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-41" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="akLvHE5HhMrmsMF_afz0-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CKDrLtMUjQwRBuTHciJY-1" connectable="0" parent="akLvHE5HhMrmsMF_afz0-41" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;Upload/Stream Audio&amp;nbsp;&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.6477" y="3" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-45" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-46" connectable="0" parent="akLvHE5HhMrmsMF_afz0-45" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;POST /scores/updateLearnerProfile (Audio)&amp;nbsp;&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.4237" y="1" as="geometry">
+            <mxPoint x="-635" y="-303" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-47" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-48" connectable="0" parent="akLvHE5HhMrmsMF_afz0-47" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;POST /v3/telemetry (Events)&amp;nbsp;&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.059" y="4" as="geometry">
+            <mxPoint x="21" y="-411" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-49" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1409" y="80" />
+              <mxPoint x="1491.75" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-50" connectable="0" parent="akLvHE5HhMrmsMF_afz0-49" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;GET /v1/content/:level/:lang&amp;nbsp;&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.2572" y="6" as="geometry">
+            <mxPoint x="35" y="103" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-51" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="350.33" y="-476.67" />
+              <mxPoint x="350.33" y="702.33" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-52" connectable="0" parent="akLvHE5HhMrmsMF_afz0-51" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;POST /addLesson, GET /getLessonProgress&amp;nbsp;&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.2186" y="4" as="geometry">
+            <mxPoint x="549" y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-53" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="712.75" y="374.5" />
+              <mxPoint x="606.25" y="374.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-56" connectable="0" parent="akLvHE5HhMrmsMF_afz0-53" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;Verify Session Status&amp;nbsp;&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0075" y="-4" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-57" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-5" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;Verify Session Status&amp;nbsp;&lt;/span&gt;">
+          <mxGeometry relative="1" x="0.2165" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1086.25" y="636.75" />
+              <mxPoint x="1086.25" y="376" />
+              <mxPoint x="838.75" y="376" />
+            </Array>
+            <mxPoint x="1151.0000000000005" y="782.7500000000005" as="sourcePoint" />
+            <mxPoint x="990" y="38" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-59" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=99.25;entryPerimeter=0;" target="akLvHE5HhMrmsMF_afz0-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="948.33" y="1103.33" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-60" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=39.75;entryPerimeter=0;" target="akLvHE5HhMrmsMF_afz0-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="409.13" y="-108" />
+              <mxPoint x="409.13" y="1043.74" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-61" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1765.8" y="-108" />
+            </Array>
+            <mxPoint x="1767.25" y="652" as="sourcePoint" />
+            <mxPoint x="724" y="15" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-62" connectable="0" parent="akLvHE5HhMrmsMF_afz0-61" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;Verify Session Status&amp;nbsp;&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1066" y="3" as="geometry">
+            <mxPoint x="-604" y="-32" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-63" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1650" y="313.43" />
+              <mxPoint x="1650" y="636.86" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-64" connectable="0" parent="akLvHE5HhMrmsMF_afz0-63" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;Fetch Target Content&amp;nbsp;&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.3624" y="-2" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-65" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-66" connectable="0" parent="akLvHE5HhMrmsMF_afz0-65" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;Verify Session Status&amp;nbsp;&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.459" y="2" as="geometry">
+            <mxPoint x="-353" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-68" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="akLvHE5HhMrmsMF_afz0-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1491.86" y="840" />
+              <mxPoint x="1590" y="840" />
+              <mxPoint x="1590" y="1073.43" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-69" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="akLvHE5HhMrmsMF_afz0-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-70" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=99.25;entryPerimeter=0;" target="akLvHE5HhMrmsMF_afz0-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2250" y="351" />
+              <mxPoint x="2250" y="1103.2" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-73" edge="1" parent="akLvHE5HhMrmsMF_afz0-1" source="akLvHE5HhMrmsMF_afz0-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="akLvHE5HhMrmsMF_afz0-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2594.86" y="834" />
+              <mxPoint x="2573.71" y="834" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="akLvHE5HhMrmsMF_afz0-74" connectable="0" parent="akLvHE5HhMrmsMF_afz0-73" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rounded=1;" value="&lt;span style=&quot;color: rgb(204, 204, 204); font-family: &amp;quot;Trebuchet MS&amp;quot;, Verdana, Arial, sans-serif; font-size: 16px; background-color: rgba(42, 42, 42, 0.553);&quot;&gt;&amp;nbsp;ASR Inference (WAV)&amp;nbsp;&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.2327" as="geometry">
+            <mxPoint y="52" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
